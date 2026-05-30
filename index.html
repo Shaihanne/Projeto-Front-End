@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto_Development_Front-End</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte temática do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Get+Schwifty&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="container">
+            <h1 id="main-title">Projeto_Development_Front-End</h1>
+            <div class="controls">
+                <button id="theme-toggle" title="Alternar Tema">🌙</button>
+                <button id="random-btn">Personagem Aleatório 🎲</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="filters">
+            <input type="text" id="search-input" placeholder="Buscar personagem...">
+            <select id="status-filter">
+                <option value="">Todos os Status</option>
+                <option value="alive">Vivo</option>
+                <option value="dead">Morto</option>
+                <option value="unknown">Desconhecido</option>
+            </select>
+        </section>
+
+        <section id="characters-container">
+            <!-- Os cards serão inseridos aqui via JavaScript -->
+            <div id="loading">Carregando dimensões...</div>
+        </section>
+
+        <section id="pagination">
+            <button id="prev-btn" disabled>Anterior</button>
+            <span id="page-info">Página 1</span>
+            <button id="next-btn">Próxima</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto_Development_Front-End</p>
+    </footer>
+
+    <!-- Modal para detalhes (Funcionalidade extra) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
